@@ -9,6 +9,8 @@ import {
   Paper,
 } from "@mui/material";
 
+import "./HeroSection.css";
+
 function HeroSection() {
   const tableData = [
     {
@@ -94,38 +96,40 @@ function HeroSection() {
   ];
 
   return (
-    <TableContainer component={Paper} sx={{ maxHeight: "400px" }}>
-      <Table aria-label="simple table" stickyHeader>
-        <TableHead>
-          <TableRow>
-            <TableCell>Id</TableCell>
-            <TableCell>First Name</TableCell>
-            <TableCell>Last Name</TableCell>
-            <TableCell align="center">Email</TableCell>
-            <TableCell>Gender</TableCell>
-            <TableCell>ip_address</TableCell>
-          </TableRow>
-        </TableHead>
-
-        <TableBody>
-          {tableData.map((row) => (
-            <TableRow
-              key={row.id}
-              sx={{
-                "&:last-child td, &:last-child th": { border: 0 },
-              }}
-            >
-              <TableCell>{row.id}</TableCell>
-              <TableCell>{row.first_name}</TableCell>
-              <TableCell>{row.last_name}</TableCell>
-              <TableCell>{row.email}</TableCell>
-              <TableCell>{row.gender}</TableCell>
-              <TableCell>{row.ip_address}</TableCell>
+    <div className="tablepage">
+      <TableContainer component={Paper} sx={{ maxHeight: "400px" }}>
+        <Table aria-label="simple table" stickyHeader>
+          <TableHead>
+            <TableRow>
+              <TableCell>Id</TableCell>
+              <TableCell>First Name</TableCell>
+              <TableCell>Last Name</TableCell>
+              <TableCell align="center">Email</TableCell>
+              <TableCell>Gender</TableCell>
+              <TableCell>ip_address</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+
+          <TableBody>
+            {tableData.map((row) => (
+              <TableRow
+                key={row.id}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                }}
+              >
+                <TableCell>{row.id}</TableCell>
+                <TableCell>{row.first_name}</TableCell>
+                <TableCell>{row.last_name}</TableCell>
+                <TableCell>{row.email}</TableCell>
+                <TableCell>{row.gender}</TableCell>
+                <TableCell>{row.ip_address}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 }
 

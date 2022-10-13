@@ -1,11 +1,17 @@
 import "../../App.css";
+import Footer from "../Footer/Footer";
 
-import HeroSection from "../HeroSection";
+import HeroSection from "../HeroSection/HeroSection";
+import ProductTable from "../ProductTable/ProductTable";
+import "./Home.css";
 
 function Home() {
   return (
     <>
-      <HeroSection />
+      <div class="homepage">
+        <ProductTable />
+        {/* <HeroSection /> */}
+      </div>
     </>
   );
 }

@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "./Button";
+import {
+  faCoffee,
+  faBars,
+  faClose,
+  faRotateLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import { Button } from "../Button/Button";
 import "./Navbar.css";
 
 function Navbar() {
@@ -31,8 +36,8 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            LockFin
-            <FontAwesomeIcon className="fa-typo3" icon={faCoffee} />
+            Queex
+            <FontAwesomeIcon className="fa-typo3" icon={faRotateLeft} />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon
