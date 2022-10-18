@@ -17,8 +17,6 @@ import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 
 function ProductTable() {
-
-
   const [dataItems, setDataItems] = useState([]);
   useEffect(() => {
     axios
@@ -48,6 +46,7 @@ function ProductTable() {
                 <TableCell>Description</TableCell>
                 <TableCell>Quantity</TableCell>
                 <TableCell>Price</TableCell>
+                <TableCell>Cost</TableCell>
                 <TableCell>Category</TableCell>
               </TableRow>
             </TableHead>
@@ -65,7 +64,8 @@ function ProductTable() {
                   <TableCell>{row.description}</TableCell>
                   <TableCell>{row.quantity}</TableCell>
                   <TableCell>{row.price}</TableCell>
-                  <TableCell>{row.category_name}</TableCell>
+                  <TableCell>{row.cost}</TableCell>
+                  <TableCell>{row.category}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
