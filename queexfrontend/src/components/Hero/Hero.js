@@ -12,14 +12,14 @@ import {
 function Hero() {
   return (
     <HeroSection>
-      <HeroVideo src="./assets/hero1.mp4" autoPlay muted />
+      <HeroVideo src="./assets/hero.mp4" autoPlay muted />
 
       <Container>
         <MainHeading>All in one POS system </MainHeading>
         <HeroText>
-          We Provide the best POS system, Inventory, Delivery App integration
-          with Automated performance measurement system to excel your business
-          needs.
+          We Provide the best POS System, Inventory System, Built In Delivery
+          System , Automated Performance Measurement System to excel your
+          business needs.
         </HeroText>
         <ButtonWrapper>
           <Link to="/sign-up">

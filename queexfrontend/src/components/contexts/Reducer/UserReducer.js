@@ -39,6 +39,8 @@ export const AuthReducer = (initialState, action) => {
         // user: action.payload.user.username,
       };
     case "LOGIN_ERROR":
+      console.log("=====");
+      console.log(action);
       return {
         ...initialState,
         loading: false,

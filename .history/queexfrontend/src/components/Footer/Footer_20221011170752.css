@@ -1,0 +1,13 @@
+.footer-container {
+  background-color: black;
+  color: #fff;
+  margin-top: 3em;
+  bottom: 0;
+  position: relative;
+}
+
+.footercontainer {
+  max-width: 1500px;
+  width: 80%;
+  margin: auto;
+}

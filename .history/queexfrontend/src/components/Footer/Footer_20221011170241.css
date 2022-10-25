@@ -1,0 +1,10 @@
+.main-footer {
+  background-color: black;
+  color: #fff;
+}
+
+.footercontainer {
+  max-width: 1500px;
+  width: 80%;
+  margin: auto;
+}

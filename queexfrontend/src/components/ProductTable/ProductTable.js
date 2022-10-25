@@ -11,24 +11,41 @@ import {
 
 import "./ProductTable.css";
 import axios from "axios";
-import { productListURL } from "../../constants";
+import { cloverApi, productListURL } from "../../constants";
 import { red } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 
 function ProductTable() {
   const [dataItems, setDataItems] = useState([]);
+  const token = "3b3e01a1-d76f-2d10-8276-8ccdc1304e3e";
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+  };
+
+  const bodyParameters = {};
   useEffect(() => {
     axios
-      .get(productListURL)
+      .get(`${cloverApi}?limit=1000`, config)
       .then((res) => {
-        console.log(res);
-        setDataItems(res.data);
+        setDataItems(res.data.elements);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(productListURL)
+  //     .then((res) => {
+  //       setDataItems(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+
+  // }, []);
 
   return (
     <>
@@ -37,10 +54,15 @@ function ProductTable() {
         <h3>
           <Link to="/upload">Add Items</Link>
         </h3>
-        <TableContainer component={Paper} sx={{ maxHeight: "400px" }}>
-          <Table aria-label="simple table" stickyHeader>
+        <TableContainer component={Paper} sx={{ maxHeight: "600px" }}>
+          <Table
+            className="ui striped table"
+            aria-label="simple table"
+            stickyHeader
+          >
             <TableHead weight="bold">
               <TableRow>
+                <TableCell>#</TableCell>
                 <TableCell>UPC</TableCell>
                 <TableCell>Name</TableCell>
                 <TableCell>Description</TableCell>
@@ -52,17 +74,18 @@ function ProductTable() {
             </TableHead>
 
             <TableBody>
-              {dataItems.map((row) => (
+              {dataItems.map((row, index) => (
                 <TableRow
                   key={row.id}
                   sx={{
                     "&:last-child td, &:last-child th": { border: 0 },
                   }}
                 >
-                  <TableCell>{row.upc}</TableCell>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{row.sku}</TableCell>
                   <TableCell>{row.name}</TableCell>
                   <TableCell>{row.description}</TableCell>
-                  <TableCell>{row.quantity}</TableCell>
+                  <TableCell>{row.stockCount}</TableCell>
                   <TableCell>{row.price}</TableCell>
                   <TableCell>{row.cost}</TableCell>
                   <TableCell>{row.category}</TableCell>

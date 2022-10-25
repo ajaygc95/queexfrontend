@@ -5,8 +5,8 @@ export const data = [
     id: "about",
   },
   {
-    to: "/pricing",
-    text: "Pricing",
+    to: "/about",
+    text: "About",
   },
   {
     to: "/signup",

@@ -1,0 +1,10 @@
+# FROM public.ecr.aws/lambda/nodejs:14
+FROM node:14-alpine
+ENV NODE_ENV=production
+WORKDIR /var/task
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install --production --silent
+COPY . ./
+EXPOSE 3000
+ENTRYPOINT ["aws-lambda-ric"]
+CMD ["npm", "start"]

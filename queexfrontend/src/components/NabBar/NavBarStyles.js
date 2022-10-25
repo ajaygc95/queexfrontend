@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import galamart_logo from "./galamart_logo.svg";
 
 export const Nav = styled.nav`
-  background: transparent;
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   margin-bottom: -80px;
   height: 80px;
   display: flex;
@@ -16,7 +16,11 @@ export const Nav = styled.nav`
   z-index: 50;
   width: 100%;
 
-  transition: background-color 0.3s ease-in;
+  ${({ transparent }) =>
+    transparent &&
+    `
+    background: transparent;
+  `}
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -55,6 +59,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    color: #fff;
   }
 `;
 
@@ -85,6 +90,30 @@ export const NavMenu = styled.ul`
   }
 `;
 
+export const StyledLink = styled(Link)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  font-size: 1.5rem;
+
+  &:hover {
+    color: #c8c9d8;
+    transition: all 0.3s ease;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    display: table;
+
+    &:hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
 export const NavItem = styled.li`
   height: 80px;
   cursor: pointer;
@@ -109,6 +138,7 @@ export const NavLinks = styled.span`
   &:hover {
     color: #c8c9d8;
     transition: all 0.3s ease;
+    text-decoration: underline;
   }
 
   @media screen and (max-width: 960px) {

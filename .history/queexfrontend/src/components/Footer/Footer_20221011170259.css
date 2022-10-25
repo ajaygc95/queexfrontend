@@ -1,0 +1,12 @@
+.main-footer {
+  background-color: black;
+  color: #fff;
+  margin-top: 3em;
+  bottom: 0;
+}
+
+.footercontainer {
+  max-width: 1500px;
+  width: 80%;
+  margin: auto;
+}

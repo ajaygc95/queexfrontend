@@ -1,0 +1,9 @@
+.hero-container {
+  height: 200;
+  width: auto;
+  background-color: yellow;
+}
+.heropage {
+  width: 80%;
+  margin: auto;
+}

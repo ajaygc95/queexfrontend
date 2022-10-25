@@ -1,0 +1,14 @@
+.form-container {
+  background-color: red;
+  min-height: 80vh;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.form-input {
+  background-color: red;
+  display: felx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

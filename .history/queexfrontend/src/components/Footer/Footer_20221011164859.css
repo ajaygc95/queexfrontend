@@ -1,0 +1,22 @@
+.main-footer {
+  background-color: black;
+  color: #fff;
+  min-height: 200px;
+}
+
+.footercontainer {
+  max-width: 1500px;
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+    lit
+  text-decoration: none;
+}

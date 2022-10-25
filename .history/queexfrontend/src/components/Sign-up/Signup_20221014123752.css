@@ -1,0 +1,31 @@
+.signup-container {
+  margin: 10px auto;
+
+  max-width: 1500px;
+}
+
+.form-container {
+  margin-top: 100px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+.input-item {
+  padding: 10px 0px;
+}
+
+.submit {
+  margin-top: 20px;
+  width: 280px;
+}

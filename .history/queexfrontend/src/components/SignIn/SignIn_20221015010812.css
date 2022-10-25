@@ -1,0 +1,8 @@
+.signin-container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.signin-field {
+  box-shadow:   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}

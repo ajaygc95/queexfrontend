@@ -1,0 +1,39 @@
+import React from "react";
+import "./Footer.css";
+
+import { faRotateLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+function Footer() {
+  return (
+    <>
+      <div className="main-footer">
+        <div className="footercontainer">
+          <div className="row">
+            <div className="col">
+              <Link to="/" className="footer-logo">
+                Queex
+                <FontAwesomeIcon className="fa-typo3" icon={faRotateLeft} />
+              </Link>{" "}
+            </div>
+            <div className="col">
+              <ul>
+                <h4>Contact US</h4>
+                <li>408 111 111</li>
+                <li>help@queex.com</li>
+                <li>Facebook</li>
+              </ul>
+            </div>
+          </div>
+          <div className="row">
+            <p className="col-sm">
+                &copy;
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Footer;

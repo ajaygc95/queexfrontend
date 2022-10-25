@@ -11,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1300px;
+  max-width: 1500px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 50px;
+  padding: 0px 20px;
 
   @media screen and (max-width: 960px) {
     padding: 0 30px;
@@ -136,5 +136,7 @@ export const Button = styled.button`
     color: black;
   }
 `;
+
+
 
 export default GlobalStyle;

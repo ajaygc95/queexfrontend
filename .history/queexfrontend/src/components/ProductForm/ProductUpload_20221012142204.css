@@ -1,0 +1,17 @@
+.form-container {
+  background-color: red;
+  min-height: 80vh;
+  max-width: 1500px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.form-field {
+  width: 100px;
+  height: 50px;
+}
+/* .form-input {
+  width: 400px;
+  background-color: yellow;
+} */

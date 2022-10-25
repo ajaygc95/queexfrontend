@@ -1,0 +1,10 @@
+.hero-container {
+  height: 200;
+  width: auto;
+  background-color: yellow;
+}
+.tablepage {
+  margin-top: 10px;
+  width: 80%;
+  margin: 10px auto;
+}

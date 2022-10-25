@@ -1,0 +1,11 @@
+.from-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.input-field {
+  background-color: red;
+  padding: 15px;
+  margin: 10px 0px;
+}
